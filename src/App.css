@@ -1,10 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+
 .App {
-  text-align: center;
+  /* text-align: center; */
+  text-align: left;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+:root {
+  --primary: #0B150E;
+  --primary-color:  #00F07D;
+  --secondary-color: #FFFFFF;
+  --fikka-color: #A9AEA8;
+  --background-color: #091a31ff;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,25 +27,250 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--background-color);
+  padding: 20vh 25vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--secondary-color);
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+.mainUsername, .aboutMe{
+  font-size: 5vh;
+  color: var(--primary-color);
 }
+
+.subHead{
+  color: var(--fikka-color);
+  font-size: 5vh;
+}
+
+
+.Projects{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Project{
+  size: 10px;
+  flex: 1 0 10%;
+}
+
+/* --------------- Header CSS ------------------- */
+
+.intro-header, .overview{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15vh;
+}
+
+
+.intro-header-left{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.download-btn{
+  font-family: 'Abel', sans-serif;
+  background-color: var(--primary-color);
+  color: black;
+  font-size: 2.5vh;
+  border-radius: 5px;
+  border: var(--fikka-color);
+  padding: 10px;
+}
+
+.download-btn:hover {
+  background-color: #4CAF50; /* Green */
+  color: black;
+}
+
+.intro-body{
+  margin-bottom: 15vh;
+}
+
+.intro-body > p{
+  text-align: justify;
+  margin: 0%;
+}
+
+
+.overview{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15vh;
+}
+
+.overview-1, .overview-2, .overview-3 {
+  width: 30%;
+}
+
+.overview-1 > h4, .overview-2 > h4, .overview-3 > h4 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.overview-1 > ul, .overview-2 > ul, .overview-3 > ul{
+  margin: 0;
+  /* list-style: none; */
+  padding-left: 20px;
+}
+
+/* ------------ footer ------------ */
+.footer{
+  font-family:'Abel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.centerFoot > .userName, .centerLand > .userName{
+  font-size: 4vh;
+  color: var(--primary-color);
+  padding: 0%;
+}
+
+.centerFoot > .userPost, .centerLand > .userPost{
+  padding: 0%;
+  margin: 0%;
+  font-size: 5vh;
+  color: var(--fikka-color);
+}
+
+.top-react-icons{
+  color: var(--fikka-color);
+  font-size: 3.5vh;
+  padding: 5px 5px;
+}
+
+.top-react-icons:hover {
+  color: var(--primary-color);
+}
+
+.footer-navbar > a {
+  font-size: 3vh;
+  color: var(--fikka-color);
+}
+
+.footer-navbar > a:hover {
+  color: white;
+}
+
+.App-header {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: var(--secondary-color);
+}
+
+.landingPage{
+  min-height: 100vh;
+  padding: 0vh 20vh 0vh 20vh;
+  font-family:'Abel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* position: relative; */
+  /* padding: 10vh 0vh 0vh 0vh; */
+}
+
+/* ----------------------------------------------- */
+
+/* .curtain {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: black;
+  transition: height 5s;
+}
+
+
+
+.centerLand {
+  position: relative;
+  z-index: 1;
+}
+
+.curtain.open {
+  height: 100%;
+} */
+
+/* ---------------------------------------- */
+
+.App-logo-lp {
+  height: 40vmin;
+  pointer-events: none;
+  margin-top: 14.8vh;
+  /* border: dotted; */
+}
+
+.LPaboutme{
+  margin: 0vh;
+  padding: 0vh 0;
+}
+
+.LPaboutme > p {
+  color: var(--primary-color);
+  font-size: 5vh;
+  margin: 5vh 0vh;
+}
+
+.oneLiner > text{
+  font-size: 3vh;
+  color: var(--fikka-color);
+}
+
+.LP-Center-Content{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.details-btn{
+  height: 40px;
+  width: 080px;
+  background-color: var(--primary-color);
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 12rem 12rem 0 0;
+  border: none;
+}
+
+.details-btn:hover{
+  background-color: var(--fikka-color);
+}
+
+.arrowIcon{
+  font-size: 30px;
+  color: var(--background-color);
+}
+
+/* .test{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
